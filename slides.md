@@ -83,6 +83,10 @@ http://myserver.com/logs?name=error.log&subdir=system
 * The server has a `flag.log` file one directory up from the logs
 * Try to stop the server revealing the flag file
 
+---
+
+# Server file handling
+
 ## Attacks that worked
 
 * `subdir=../`
@@ -90,7 +94,7 @@ http://myserver.com/logs?name=error.log&subdir=system
 
 ## Defenses that worked
 
-* Checking for special characters in the input (e.g. `..`) - good idea, but might be hard to think of everythin
+* Checking for special characters in the input (e.g. `..`) - good idea, but might be hard to think of everything
 * Use explicit logic to check that the file being asked for is in the right place - these kinds of logical
   checks can be better than trying to sanitize input and account for every possible bad value
 
